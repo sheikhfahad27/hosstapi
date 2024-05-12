@@ -4,7 +4,7 @@ const bdconnect = require("./dbconects/Connect");
 const user = require("./schema/userdata");
 const cors = require("cors");
 const login = require("./schema/login");
-
+const port =3000
 require("dotenv").config();
 app.use(express.json());
 app.use(cors());
@@ -70,6 +70,6 @@ app.post("/login", async (req, res) => {
   res.json(newUser);
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("server is started");
 });
